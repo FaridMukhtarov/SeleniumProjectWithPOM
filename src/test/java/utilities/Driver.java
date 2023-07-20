@@ -9,7 +9,6 @@ import java.time.Duration;
 
 public class Driver {
     static WebDriver driver;
-    static ReusableMethods reusableMethods = new ReusableMethods();
     public static WebDriver getDriver(){
         if (driver == null){
             WebDriverManager.firefoxdriver().setup();

@@ -2,12 +2,14 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
+import pages.RegisterUserPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class RegisterUserTest {
     WebDriver driver;
     ReusableMethods reusableMethods = new ReusableMethods();
+    RegisterUserPage registerUserPage = new RegisterUserPage();
 
     @Test(priority = 1)
     public void LaunchBrowser(){
@@ -19,17 +21,14 @@ public class RegisterUserTest {
         driver.get(reusableMethods.url);
     }
 
-
     @Test(priority = 3)
     public void VerifyThatHomePageIsVisibleSuccessfully(){
-
-        System.out.println("kgsdfs");
+        registerUserPage.homePageIsVisible();
     }
 
     @Test(priority = 4)
     public void ClickOnSignupLoginButton(){
-
-        System.out.println("sdgl");
+        registerUserPage.clickSigUpLoginButton();
     }
 
     @Test(priority = 5)
