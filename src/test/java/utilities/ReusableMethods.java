@@ -44,6 +44,11 @@ public class ReusableMethods {
         select.selectByVisibleText(selectText);
     }
 
+    public void isEnabled(WebElement isEnabledElement){
+        wait.until(ExpectedConditions.visibilityOf(isEnabledElement));
+            Assert.assertTrue(isEnabledElement.isEnabled());
+    }
+
     public static void threadWait(int second){
         try {
             Thread.sleep(second * 1000L);
